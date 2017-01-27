@@ -1,0 +1,31 @@
+{
+  "name": "gherkin-linter",
+  "version": "0.0.1",
+  "description": "A JavaScript Gherkin linter",
+  "author": "Sophie Hutchinson",
+  "main": "src/main.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/s-hutch/gherkin-linter/"
+  },
+  "keywords": [
+    "gherkin",
+    "linter"
+  ],
+  "dependencies": {
+    "gherkin": "4.0.0"
+  },
+  "devDependencies": {
+    "chai": "",
+    "mocha": ""
+  },
+  "bin": {
+    "gherkin-linter": "src/main.js"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "mocha": "mocha --recursive",
+    "test": "npm run lint && npm run mocha"
+  },
+  "license": "MIT"
+}

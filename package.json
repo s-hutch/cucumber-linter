@@ -2,7 +2,12 @@
   "name": "gherkin-linter",
   "version": "0.0.1",
   "description": "A JavaScript Gherkin linter",
-  "author": "Sophie Hutchinson",
+  "scripts": {
+    "lint": "eslint .",
+    "test": "npm run lint && mocha --reporter spec",
+    "test-coverage": "node_modules/istanbul/lib/cli.js cover node_modules/mocha/bin/_mocha -- -R spec test/*",
+    "gherkin-linter": "node ./src/main.js"
+  },
   "main": "src/main.js",
   "repository": {
     "type": "git",
@@ -16,16 +21,16 @@
     "gherkin": "4.0.0"
   },
   "devDependencies": {
-    "chai": "",
-    "mocha": ""
+    "chai": "^3.5.0",
+    "coveralls": "^2.11.15",
+    "eslint": "^3.14.1",
+    "istanbul": "^0.4.5",
+    "mocha": "^3.2.0",
+    "yargs": "^6.6.0"
   },
   "bin": {
     "gherkin-linter": "src/main.js"
   },
-  "scripts": {
-    "lint": "eslint .",
-    "mocha": "mocha --recursive",
-    "test": "npm run lint && npm run mocha"
-  },
+  "author": "Sophie Hutchinson",
   "license": "MIT"
 }
